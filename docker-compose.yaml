@@ -4,12 +4,12 @@ services:
                 image: mc
                 restart: always
                 volumes:
-                        - "/Users/brandon/projects/minecraft/world:/minecraft/world"
-                        - "/Users/brandon/projects/minecraft/world_nether:/minecraft/world_nether"
-                        - "/Users/brandon/projects/minecraft/world_the_end:/minecraft/world_the_end"
-                        - "/Users/brandon/projects/minecraft/configs/ops.json:/minecraft/ops.json"
-                        - "/Users/brandon/projects/minecraft/configs/server.properties:/minecraft/server.properties"
-                        - "/Users/brandon/projects/minecraft/configs/whitelist.json:/minecraft/whitelist.json"
+                        - "${MCROOT}/world:/minecraft/world"
+                        - "${MCROOT}/world_nether:/minecraft/world_nether"
+                        - "${MCROOT}/world_the_end:/minecraft/world_the_end"
+                        - "${MCROOT}/configs/ops.json:/minecraft/ops.json"
+                        - "${MCROOT}/configs/server.properties:/minecraft/server.properties"
+                        - "${MCROOT}/configs/whitelist.json:/minecraft/whitelist.json"
                 ports:
                         - "25565:25565"
                 environment:
