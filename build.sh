@@ -5,8 +5,7 @@ DSHOOK=$(cat /home/minecraft/.discord/.env)
 
 if [! command -v discord.sh &> /dev/null ]; then
 	git clone https://github.com/ChaoticWeg/discord.sh
-	cd discord.sh
-	mv discord.sh /usr/bin/discord.sh
+	mv discord.sh/discord.sh /usr/bin/discord.sh
 fi
 
 if [ ! -d "/home/minecraft/paper-mc-docker" ]; then
@@ -21,8 +20,6 @@ if [ ! -f "/home/minecraft/paper-mc-docker/.env" ]; then
 	echo "MCROOT=/home/minecraft/paper-mc-docker" >> paper-mc-docker/.env
 	echo "Added environment file"
 fi
-
-
 
 echo "Checking config and world files exist!"
 
